@@ -1,15 +1,22 @@
 <?php
 
+session_start();
+
+// File locations.
 $settings_file = "config-settings.php";
 $htaccess_file = "../../.htaccess";
-
+$phpass_file   = '../plugins/phpass-0.3/PasswordHash.php';
 // Get existing settings.
 if (file_exists($settings_file)) {
     include($settings_file);
 }
-
+if (file_exists($phpass_file))
+{
+    include($phpass_file);
+    $hasher  = new PasswordHash(8,FALSE);
+}
 function settings_format($name, $value) {
-    return sprintf("\$%s = \"%s\";", $name, $value);
+    return sprintf("\$%s = '%s';", $name, $value);
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -18,9 +25,7 @@ function settings_format($name, $value) {
 
 // Should allow this only on first install or after the user is authenticated
 // but this doesn't quite work. So back to default.
-// if ($_POST["submit"] == "submit" && (!file_exists($settings_file) || isset($_SESSION['user'])))
-
-if ($_POST["submit"] == "submit")
+if ($_POST["submit"] == "submit" && (!file_exists($settings_file) || isset($_SESSION['user'])))
 {
     // Get submitted setup values.
     $blog_email = $_POST["blog_email"];
@@ -34,7 +39,7 @@ if ($_POST["submit"] == "submit")
     // There must always be a $password, but it can be changed optionally in the
     // settings, so you might not always get it in $_POST.
     if (!isset($password) || !empty($_POST["password"])) {
-        $password = sha1($_POST["password"]);
+        $password = $hasher->HashPassword($_POST["password"]);
     }
 
     if(!isset($header_inject)) {
@@ -52,6 +57,10 @@ if ($_POST["submit"] == "submit")
     if(isset($_POST["footer_inject"])) {
         $footer_inject = addslashes($_POST["footer_inject"]);
     }
+
+    // Get subdirectory
+    $dir_arr = explode('dropplets/', $_SERVER['SCRIPT_NAME']);
+    $dir = $dir_arr[0];
 
     // Output submitted setup values.
     $config[] = "<?php";
@@ -78,13 +87,14 @@ if ($_POST["submit"] == "submit")
         $htaccess[] = "RewriteRule ^(images)($|/) - [L]";
         $htaccess[] = "Options +FollowSymLinks -MultiViews";
         $htaccess[] = "RewriteEngine on";
+        if (strlen($dir) > 1)
+            $htaccess[] = "RewriteBase " . $dir;
         $htaccess[] = "RewriteCond %{REQUEST_URI} !index";
         $htaccess[] = "RewriteCond %{REQUEST_FILENAME} !-f";
-        $htaccess[] = "RewriteRule ^(.*)$ index.php?filename=$1 [L]";
+        $htaccess[] = "RewriteRule ^(.*)$ index.php?filename=$1 [NC,QSA,L]";
     
         // Generate the .htaccess file.
         file_put_contents($htaccess_file, implode("\n", $htaccess));
-        
     }
 
     // Redirect

@@ -46,10 +46,6 @@ p, ul, ol {
     margin: 0 0 20px;
 }
 
-p + p {
-    text-indent: 40px;
-}
-
 ul, ol {
     margin-left: 40px;
 }
@@ -133,7 +129,9 @@ article.single {
     display: none;
 }
 
-.post p a {
+.post p a,
+.post ul a,
+.post ol a {
     border-bottom: 1px solid #ebebeb;
 }
 
@@ -180,7 +178,7 @@ article.single {
 ul.actions {
     width: 100%;
     float: left;
-    margin: 24px 0 0;
+    margin: 0;
 }
 
 ul.actions li {

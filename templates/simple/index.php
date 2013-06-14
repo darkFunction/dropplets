@@ -26,7 +26,47 @@
     <body>
         <?php echo $content ?>
 
+        <?=(isset($pagination) && (isset($infinite_scroll) && $infinite_scroll == "off") ? $pagination : "") ?>
+
         <?php echo $powered_by ?>
+
+        <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+        <script>
+            var infinite = <?=($infinite_scroll !== "off" && $pagination_on_off !== "off") ? "true;" : "false;";?>
+            var next_page = 2;
+            var loading = false;
+            var no_more_posts = false;
+            $(function() {
+                function load_next_page() {
+                    $.ajax({
+                        url: "?page=" + next_page,
+                        success: function (res) {
+                            next_page++;
+                            var result = $.parseHTML(res);
+                            var articles = $(result).filter(function() {
+                                return $(this).is('article');
+                            });
+                            if (articles.length < 2) {  //There's always one default article, so we should check if  < 2
+                                no_more_posts = true;
+                            }  else {
+                                $('body').append(articles.slice(1));
+                            }
+                            loading = false;
+                        }
+                    });
+                }
+
+                $(window).scroll(function() {
+                    var when_to_load = $(window).scrollTop() * 0.32;
+                    if (infinite && (loading != true && !no_more_posts) && $(window).scrollTop() + when_to_load > ($(document).height()- $(window).height() ) ) {
+                        // Sometimes the scroll function may be called several times until the loading is set to true.
+                        // So we need to set it as soon as possible
+                        loading = true;
+                        setTimeout(load_next_page,500);
+                    }
+                });
+            });
+        </script>
 
         <?php echo stripslashes($footer_inject) ?>
     </body>
