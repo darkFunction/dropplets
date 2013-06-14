@@ -8,7 +8,7 @@
             <ul>
                 <li>Written by <?php echo $post_author ?></li>
                 <li><?php echo $published_date ?></li>
-                <li>About <?php echo $post_category ?></li>
+                <li>Subject: <?php echo $post_category ?></li>
                 <li></li>
             </ul>
         </div>
@@ -19,7 +19,7 @@
             <?php echo $post_intro ?>
 
             <ul class="actions">
-                <li><a class="button" href="<?php echo $post_link ?>">Continue Reading</a></li>
+                <li><a class="button" href="<?php echo $post_link ?>">View Note</a></li>
             </ul>
         </div>
     </div>
