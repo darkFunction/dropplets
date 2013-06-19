@@ -93,16 +93,18 @@ if (empty($_GET['filename'])) {
 } else if($_GET['filename'] == 'rss' || $_GET['filename'] == 'atom') {
     $filename = $_GET['filename'];
 }  else {
+    
     //Filename can be /some/blog/post-filename.md We should get the last part only
     $filename = explode('/',$_GET['filename']);
 
     // File name could be the name of a category
-    if($filename[count($filename) - 2] == "categories") {
-      $category = $filename[count($filename) - 1];
-      $filename = null;
+    if($filename[count($filename) - 2] == "category") {
+        $category = $filename[count($filename) - 1];
+        $filename = null;
     } else {
-      // Individual Post
-      $filename = POSTS_DIR . $filename[count($filename) - 1] . FILE_EXT;
+      
+        // Individual Post
+        $filename = POSTS_DIR . $filename[count($filename) - 1] . FILE_EXT;
     }
 }
 
@@ -131,9 +133,9 @@ if ($filename==NULL) {
     }
 
     if($category) {
-      $all_posts = get_posts_for_category($category);
+        $all_posts = get_posts_for_category($category);
     } else {
-      $all_posts = get_all_posts();
+        $all_posts = get_all_posts();
     }
 
     $pagination = ($pagination_on_off != "off") ? get_pagination($page,round(count($all_posts)/ $posts_per_page)) : "";
@@ -172,7 +174,11 @@ if ($filename==NULL) {
             $post_content = $post['post_content'];
 
             // Get the post link.
-            $post_link = str_replace(FILE_EXT, '', $post['fname']);
+            if ($category) {
+                $post_link = trim(strtolower($post_category)).'/'.str_replace(FILE_EXT, '', $post['fname']);
+            } else {
+                $post_link = str_replace(FILE_EXT, '', $post['fname']);
+            }
 
             // Get the post image url.
             $image = str_replace(array(FILE_EXT), '', POSTS_DIR.$post['fname']).'.jpg';
@@ -184,7 +190,11 @@ if ($filename==NULL) {
             }
 
             // Get the site intro template file.
-            include_once $intro_file;
+            if ($category) {
+                // No intro for categories.
+            } else {
+                include_once $intro_file;
+            }
 
             // Get the milti-post template file.
             include $posts_file;
@@ -588,7 +598,7 @@ function get_all_posts($options = array()) {
 
                 // Early return if we only want posts from a certain category
                 if($options["category"] && $options["category"] != trim(strtolower($post_category))) {
-                  continue;
+                    continue;
                 }
 
                 // Define the post status.
@@ -637,7 +647,7 @@ function get_pagination($page,$total) {
         if ($i == $page) {
             $string .= "<li style='display: inline-block; margin:5px;' class=\"active\"><a class=\"button\" href='#'>".$i."</a></li>";
         } else {
-            $string .=  "<li style='display: inline-block; margin:5px;'><a class=\"button\" href=\"/?page=".$i."\">".$i."</a></li>";
+            $string .=  "<li style='display: inline-block; margin:5px;'><a class=\"button\" href=\"?page=".$i."\">".$i."</a></li>";
         }
     }
     $string .= "</ul>";
