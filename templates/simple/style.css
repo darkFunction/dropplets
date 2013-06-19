@@ -77,12 +77,21 @@ a:hover, a:focus {
     color: #000000;
 }
 
+pre {
+	overflow: scroll;
+	padding-left: 5px;
+	padding-top: 5px;
+	margin-bottom: 10px;
+	margin-top:10px;
+    color: #555555;
+    background: #f4f4f4;
+    border: solid 1px #e1e1e1
+} 
+
 code, pre {
-    font-family: 'Source Sans Pro', monospace;
-    text-rendering: optimizeLegibility;
-    font-size: 18px;
-    letter-spacing: 0.1em;
-    margin: 0 0.1em;
+    font-family: "Consolas", "Courier New", Courier, mono;
+    font-size: 14px;
+    line-height: 1.2em;
 }
 
 /* Posts
