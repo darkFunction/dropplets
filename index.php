@@ -659,7 +659,8 @@ function get_pagination($page,$total) {
 /*-----------------------------------------------------------------------------------*/
 
 function get_twitter_profile_img($username, $size = '') {
-  $api_call = 'https://twitter.com/users/'.$username.'.json';
-  $results = json_decode(file_get_contents($api_call));
-  return str_replace('_normal', $size, $results->profile_image_url);
+  return $blog_url.'images/avatar.png';
+  //$api_call = 'https://twitter.com/users/'.$username.'.json';
+  //$results = json_decode(file_get_contents($api_call));
+  //return str_replace('_normal', $size, $results->profile_image_url);
 }
