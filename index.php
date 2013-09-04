@@ -205,7 +205,7 @@ if ($filename==NULL) {
         // Get the site title
         $page_title = $blog_title;
 
-        $blog_image = 'https://api.twitter.com/1/users/profile_image?screen_name='.$blog_twitter.'&size=bigger';
+        $blog_image = get_twitter_profile_img($post_author_twitter);
 
         // Get the page description and author meta.
         $get_page_meta[] = '<meta name="description" content="' . $meta_description . '">';
@@ -659,7 +659,7 @@ function get_pagination($page,$total) {
 /*-----------------------------------------------------------------------------------*/
 
 function get_twitter_profile_img($username, $size = '') {
-  return $blog_url.'images/avatar.png';
+  return $blog_url.'http://notes.darkfunction.com/images/avatar.png';
   //$api_call = 'https://twitter.com/users/'.$username.'.json';
   //$results = json_decode(file_get_contents($api_call));
   //return str_replace('_normal', $size, $results->profile_image_url);
