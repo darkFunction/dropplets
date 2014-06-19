@@ -9,6 +9,8 @@ Notes from day one!
 
 ### Crazy and Focused (Daniel Steinberg) ###
 
+![Photo](https://pbs.twimg.com/media/BW7kgV6IcAAqbFz.jpg)
+
 Steinberg delivered a motivating presentation encouraging developers to focus in on the core elements of our apps, and how we should clearly and specifically identify our users. 
 
 #### Key points ####
@@ -74,6 +76,8 @@ A presentation on how to setup iBeacons. Demonstrated a pyrometer transmitting l
 
 ### Core Data in Motion ###
 
+**JUST ADDED: [Presentation slides](http://www.slideshare.net/wndxlori/core-data-in-motion)**
+
 Mostly a demo of RubyMotion code for handling large datasets through CoreData. Actually didn't know about RubyMotion before the demo so it was quite hard to follow. RubyMotion allows you to write iOS applications in Ruby, being able to interface with the Apple frameworks but leverage the power of Ruby on top.
 
 #### Some points ####
@@ -137,6 +141,8 @@ I spoke to Steven after the presentation to ask about any advantages to using Ki
 		- Thinks it is less readable with all the syntactic sugar in Objective-C.
 
 ### 20 Years of Indie Mac Development (James Thomson) ###
+
+![Intro](https://pbs.twimg.com/media/BXDBkubIIAI4s29.png)
 
 James Thompson gave an account of his career developing for Apple Macs, working on DragThing and the MacOS dock, and rewriting PCalc many times for new platforms.  Some good anecdotes including one about Steve Jobs wanting to get rid of him because he was a remote developer working in Ireland, and so he had to have an office in San Francisco and pretend to be located there. Interesting talk and a lighthearted end to day one.
 

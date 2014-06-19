@@ -34,9 +34,9 @@ $powered_by = '<a class="powered-by" href="http://dropplets.com" target="_blank"
 /* Post Configuration
 /*-----------------------------------------------------------------------------------*/
 
-$pagination_on_off = "on";  //Infinite scroll by default?
+$pagination_on_off = "off";  //Infinite scroll by default?
 $posts_per_page = 4;
-$infinite_scroll = "on"; //Infinite scroll works only if pagination is on.
+$infinite_scroll = "off"; //Infinite scroll works only if pagination is on.
 $post_directory = './posts/';
 $cache_directory = './posts/cache/';
 
@@ -659,6 +659,9 @@ function get_pagination($page,$total) {
 /*-----------------------------------------------------------------------------------*/
 
 function get_twitter_profile_img($username, $size = '') {
+  if ($avatarUrl!=NULL) {
+    return $avatarUrl; 
+  }  
   return $blog_url.'http://notes.darkfunction.com/images/avatar.png';
   //$api_call = 'https://twitter.com/users/'.$username.'.json';
   //$results = json_decode(file_get_contents($api_call));
