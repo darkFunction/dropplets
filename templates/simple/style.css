@@ -14,11 +14,12 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 *********************************************************************************************/
 
 body {
-	background: #ffffff;
-	font-family: 'Merriweather', serif;
+	background: #fffff7;
+//	font-family: 'Merriweather', serif;
+	font-family: 'PT Sans';
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 27px;
+	font-size: 17px;
+	line-height: 23px;
 	color: #404040;
 	text-rendering: optimizeLegibility;
 }
@@ -105,7 +106,7 @@ code, pre {
 article {
     width: 100%;
     border-bottom: 1px solid #f1f1f1;
-    padding: 40px 0;
+    padding: 30px 0 13px 0;
 }
 
 article.draft {
@@ -166,14 +167,14 @@ article.single {
 *********************************************************************************************/
 
 .button {
-    background-color: #fbfbfb;
+    background-color: #e5f3e5;
     border: 1px solid #ebebeb;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
     line-height: 24px;
     font-weight: 300;
     border-radius: 40px;
-    color: #9b9b9b;
+    color: #808080;
     float: left;
     margin: 0 0 10px 0;
     padding: 8px 20px 9px;
