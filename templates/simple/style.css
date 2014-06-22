@@ -14,7 +14,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 *********************************************************************************************/
 
 body {
-	background: #fffff7;
+	background: #ffffff;
+    background-image:url('background.png'); 
+	background-repeat:repeat;
 //	font-family: 'Merriweather', serif;
 	font-family: 'PT Sans';
 	font-weight: 400;
@@ -106,7 +108,7 @@ code, pre {
 article {
     width: 100%;
     border-bottom: 1px solid #f1f1f1;
-    padding: 30px 0 13px 0;
+    padding: 35px 0 15px 0;
 }
 
 article.draft {
@@ -167,7 +169,7 @@ article.single {
 *********************************************************************************************/
 
 .button {
-    background-color: #e5f3e5;
+    background-color: #ffffff;
     border: 1px solid #ebebeb;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
