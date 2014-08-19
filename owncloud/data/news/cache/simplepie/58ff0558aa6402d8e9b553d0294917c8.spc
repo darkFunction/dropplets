@@ -1,0 +1,1 @@
+a:3:{s:3:"url";s:21:"http://nshipster.com/";s:8:"feed_url";s:29:"http://nshipster.com/feed.xml";s:5:"build";s:14:"20130718145142";}

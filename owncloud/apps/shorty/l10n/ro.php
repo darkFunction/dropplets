@@ -1,0 +1,23 @@
+<?php $TRANSLATIONS = array(
+"deleted" => "șters",
+"never" => "niciodată",
+"delete" => "ștergere",
+"share" => "partajare",
+"show" => "afișează",
+"Backend" => "Backend",
+"Clicks" => "Click-uri",
+"Close" => "Închide",
+"Configuration" => "Configurație",
+"Expiration" => "Expira",
+"Loading" => "încărcare",
+"Notes" => "Notă",
+"Nothing here yet" => "Nimic aici. Încarcă ceva!",
+"Reload" => "Reîncarca",
+"Reload list" => "Reîncarca listă",
+"Save" => "Salvează",
+"Settings" => "Setări",
+"Show details" => "Arată detali",
+"Status" => "Stare",
+"Title" => "Titlu",
+"Toggle toolbar" => "Comutați bara de instrumente"
+);

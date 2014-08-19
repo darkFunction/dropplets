@@ -1,0 +1,23 @@
+<?php $TRANSLATIONS = array(
+"News" => "Nyheter",
+"Address" => "Adresse",
+"Add" => "Legg til",
+"New folder" => "Ny mappe",
+"Folder" => "Mappe",
+"Folder name" => "Mappenavn",
+"Starred" => "Merket",
+"Unread articles" => "Uleste artikler",
+"All articles" => "Alle artikler",
+"from" => "fra",
+"by" => "av",
+"Cant play audio format" => "Kan ikke spille av lydformat",
+"Keep unread" => "Merk som ulest",
+"Collapse" => "Skjul",
+"Delete folder" => "Slett mappe",
+"Rename folder" => "Gi mappen nytt navn",
+"Import / Export OPML" => "Importer / Eksporter OPML",
+"Import" => "Importer",
+"Export" => "Eksporter",
+"Show all" => "Vis alle",
+"Show only unread" => "Vis kun uleste"
+);

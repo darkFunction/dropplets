@@ -1,0 +1,14 @@
+[2014-08-13 07:59:10] PicoFeed\Clients\Curl Fetch URL: http://www.ratusapparatus.com/blog/feed/
+[2014-08-13 07:59:10] PicoFeed\Clients\Curl Etag provided: "683584a706de29cc29e1faad19cd708a"
+[2014-08-13 07:59:10] PicoFeed\Clients\Curl Last-Modified provided: Tue, 22 Jul 2014 22:07:12 GMT
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl cURL total time: 0.489731
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl cURL dns lookup time: 0.008714
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl cURL connect time: 0.107661
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl cURL speed download: 0
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl cURL effective url: http://www.ratusapparatus.com/blog/feed/
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl HTTP status code: 304
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl HTTP header: Date => Wed, 13 Aug 2014 06:59:10 GMT
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl HTTP header: Server => Apache
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl HTTP header: Connection => close
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl HTTP header: ETag => "683584a706de29cc29e1faad19cd708a"
+[2014-08-13 07:59:11] PicoFeed\Clients\Curl Resource not modified

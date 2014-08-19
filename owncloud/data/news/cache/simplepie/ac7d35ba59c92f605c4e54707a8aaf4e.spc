@@ -1,0 +1,1 @@
+a:3:{s:3:"url";s:23:"http://arstechnica.com/";s:8:"feed_url";s:47:"http://feeds.arstechnica.com/arstechnica/index/";s:5:"build";s:14:"20130718145142";}

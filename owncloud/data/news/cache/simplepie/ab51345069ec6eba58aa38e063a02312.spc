@@ -1,0 +1,1 @@
+a:3:{s:3:"url";s:35:"http://www.ratusapparatus.com/blog/";s:8:"feed_url";s:40:"http://www.ratusapparatus.com/blog/feed/";s:5:"build";s:14:"20130718145142";}

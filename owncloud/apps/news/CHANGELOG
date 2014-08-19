@@ -1,0 +1,90 @@
+owncloud-news (1.001)
+* Also use monospace for pre tag
+
+ownCloud-news (0.104)
+* Also html decode the links to the page to not break on nyaa torrents
+
+ownCloud-news (0.103)
+* Fixed a bug that prevented deleting feeds when a folder was deleted
+
+ownCloud-news (0.102)
+* Fix marking read of all articles and folders on mysql and postgres
+* Fix bug that would still show items after its feed or folder has been marked as deleted
+* Fix bug that would show invalid unread count for feeds whose folders were deleted
+
+ownCloud-news (0.101)
+
+* show 99+ as max unread count
+* only show delete button if feed is active
+* Fix a bug that would show the loading sign when updating the web ui and would reload all items while reading
+* More accurate padding when hovering over a feed
+* Require 5.0.6 which includes a fix for the core API
+* Don't highlight the tab title when there are no new unread feeds
+* Make only one http request for reading all items and all items of a folder
+* Fix bug that would prevent marking a feed as read when its created and no other feeds are there
+* Fix bug that would prevent readding of a feed when a folder containing the feed was deleted
+* Also send newest item id in the api when creating a feed
+* Fix a bug that would mark the items on the right side as read regardless of feed or folder id
+* Fix a bug that would a feed from being added when he was deleted and then another feed was deleted
+* When a feed is deleted and not undone in 10 seconds and the window is closed, delete him
+* Fix bug that would make links containing hashes unclickable
+* Fix bug that broke the News app on postgresql
+* Fix bug that prevented the API from serving items
+
+ownCloud-news (0.98)
+
+* Fix XSS vulnerability in sanitation for json import
+* Fix XSS vulnerability in feed and title link
+
+ownCloud-news (0.97)
+
+* Fix XSS vulnerability in sanitation
+* Properly show embedded vimeo and youtube videos
+
+ownCloud-news (0.96)
+
+* Always open links in new tabs
+* Better exception handling for controllers
+* Implemented API
+* Fixed a bug that would prevent update of the News app
+* Log feed update errors
+* Make add website button less obstrusive
+* Fixed problem with sites that updated too frequently like youtube
+* Also update folders
+
+ownCloud-news (0.95)
+
+* Fix a bug that would cause PHP 5.3 to fail while parsing utf-8
+* Reverted the keep unread checkbox styling from a button back to a normal checkbox
+* Fix an issue that prevented scrolling when drag and dropping a feed in to a new folder
+* Do not mark items as read that have not yet been displayed to the user
+* Autopage if there are 10 items left instead of 4 times the scroll area height, fixes a bug that would not load new items if the entry was too big
+* Prefer website favicon over channel image, fixes wordpress blog favicons
+* Add all businesslayer methods for the current API spec
+* API Specification Draft
+* Fix a bug that would cause words in the headlines to always be wrapped
+* Fix a bug that would cause the ellipsis on the "Add Website" entry to be too short
+* Provide undo dialog for feed and folder deletion
+* Do not preload audio in podcast feed
+* Use utf-8 charset header in JSON responses to prevent broken headlines
+* Move the rss cache files into the ownCloud data directory
+* Autopurge: limit read articles per feed instead of using a global limit
+* Use tooltips for delete and mark read button
+* Also load the newest unread and starred count when a feed is loaded
+* Do not request updates from the client but only use the background job to make the app faster
+* Add a way to import articles from Google Reader Takeout Archive
+* Fix a bug in favicon fetcher that would not fetch certain favicons
+* Add OPML export
+* Show translated relative dates for articles
+* Show immediate feedback when adding a feed or folder
+* Add keyboard shortcuts
+* Do not show unread articles feed when there are no feeds
+* Filter HTML tags from headlines and authors
+* If the article author has no name use the mail
+* Show full feed name on hover
+* If feed has no name, use its URL
+* Do not update articles all the time that have no pubdate
+* Prevent app from making ownCloud unusable if the App Framework is not installed
+* Focus the articles area when a feed is being clicked so page up/page down work
+* Use a delay for drag and drop to make experience on Mac OS X better
+* Show unread count in the tab title

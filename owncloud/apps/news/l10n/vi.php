@@ -1,0 +1,22 @@
+<?php $TRANSLATIONS = array(
+"News" => "Tin tức",
+"Address" => "Địa chỉ",
+"Add" => "Thêm",
+"New folder" => "Tạo thư mục",
+"Folder" => "Thư mục",
+"Folder name" => "Tên thư mục",
+"Starred" => "Starred",
+"Unread articles" => "Bài chưa đọc",
+"All articles" => "Mọi bài viết",
+"by" => "bởi",
+"Cant play audio format" => "Không thể chạy định dạng audio này",
+"Keep unread" => "Giữ chưa đọc",
+"Collapse" => "Thu gọn",
+"Delete folder" => "Xóa thư mục",
+"Rename folder" => "Đổi tên thư mục",
+"Import / Export OPML" => "Xuất nhập dữ liệu OPML",
+"Import" => "Nhập vào",
+"Export" => "Xuất ra",
+"Show all" => "Hiên thị tất cả",
+"Show only unread" => "Hiển thị chưa đọc"
+);
