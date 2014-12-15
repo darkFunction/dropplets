@@ -1,8 +1,0 @@
-report/
-structure.xml
-build/
-node_modules/
-*.log
-test-results.xml
-# Mac OS
-.DS_Store

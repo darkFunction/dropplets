@@ -1,4 +1,4 @@
-# Visualising Objective-C
+# Visualising Objective-C: Introducing DFGrok!
 - Sam
 - darkFunction
 - 2013/09/04
