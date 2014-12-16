@@ -5,4 +5,4 @@
 - darkFunction Editor 
 - Published
 
-Thanks to Slydog. Please see the [Import Libraries](http://darkfunction.com/Documentation#import-libraries) page.
+Thanks to Slydog. Please see the [Import Libraries](http://darkfunction.com/editor/Documentation#import-libraries) page.
